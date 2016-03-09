@@ -1,0 +1,309 @@
+/*************************
+Diseño y Programación: Lenin Pulgar
+**************************/
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    font-size: 12px;
+    font-family: "Lato";
+}
+
+.container p{
+    color: #333;
+    font-family: 'Lato';
+    text-align: justify;
+}
+
+.container h3{
+    color:#333;
+    font-weight: bold
+}
+
+$peru-red: rgb(196,50,53);
+
+
+
+/*****
+HEADER
+******/
+header.title-bar{
+    background-color:  $peru-red;
+}
+
+header{
+    a{
+        color:#FFF;
+            &:hover{color:#FFF}
+    }
+    .menu{margin-top:2rem;}
+    min-height:8.5rem;
+}
+
+.logo{
+    display: block;
+    width: 26.25rem;
+    height: 5.583rem;
+    background:url(../img/PeruCleanLogo.svg) no-repeat center;
+    font: 300 'Lato';
+}
+
+div.switch-lang{
+    position:absolute; right:-6rem; top:.35rem;;
+}
+
+/*****
+BANNER
+******/
+
+.banner{
+    display: block;
+    width:100%;
+    height:35rem;
+    background: url(../img/banner.jpg) no-repeat center;
+    background-size: cover;
+    div{
+        margin: 0 auto;
+    }
+    article{
+        color:#FFF;
+        font-weight: 300;
+        font-size: 3rem;
+        text-align: right;
+        padding-right: 30%;
+        padding-top: 10%;
+    }
+}
+
+/*******
+NOSOTROS
+********/
+.nosotros{
+    padding:3rem 0;
+    p{
+        margin-left:1.5rem;
+    }
+}
+
+/*RIGHT*/
+.nos-right{
+    span{display: block;
+        width:10rem;
+        height: auto;
+        padding-top: 2rem;
+        
+    }
+    .ssbuildings{
+        margin-top:5rem;
+    }
+    .ss-buildings:before{
+        margin: 10rem;
+        vertical-align: 10rem;
+        font-size: 20rem;
+    }
+}
+
+/********
+ACCORDION
+*********/
+
+.accordion {
+    border:0;
+    h3{margin-left:-1rem;}
+    .accordion-title{
+        border-bottom:0;
+        &::before{
+            display:none;
+        }
+    }
+    .is-active div{
+        border-bottom:0;
+    }
+    .accordion-content{
+        padding:2rem 2rem 2rem 1.5rem;
+        text-align: justify;
+    }
+}
+
+
+
+.container h3 {
+  display: inline-block;
+  padding: 0 15px;
+  position: relative;
+}
+
+
+.container h3:after {
+  background: #333;
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+    top: 50%;
+  width: 1000%;
+}
+
+
+.container h3:after {
+  left: 100%;
+}
+
+.container {
+  overflow: hidden;
+}
+
+.accordion-title{
+    &:hover{background-color: transparent}
+    &:focus{background-color: transparent}
+}
+
+/*****
+FOOTER
+******/
+
+footer{
+    margin-top: 2rem;
+    height: 5rem;
+    background-color:#333;
+    p{
+        text-align: right;
+        color: #FFF;
+        margin-top: 1.5rem;
+    }
+}
+
+/*Lava lamp underline*/
+
+#menu { 
+	position: relative; 
+}
+.magic-line { 
+	position: absolute;
+	bottom: -1px; 
+	left: 0; 
+	width: 100px; 
+	height: 2px; 
+	background: #FFF;
+}
+.active a { font-weight: 700 !important 
+}
+
+/**********
+MEDIA QUERY
+***********/
+
+@media screen and (max-width: 39.9375em){
+    nav ul li{
+        width: 100%;
+        float: left;
+        text-align: left;
+    }
+    .magic-line {display: none; height: 0;}
+    
+    
+    /*LEFT*/
+    .nos-left{
+        p{padding-right:1rem;}
+    }
+    /*RIGHT*/
+    .nos-right{
+    span{display: block;
+        width:10rem;
+        height: auto;
+        padding-top: 2rem;
+        
+    }
+    .ssbuildings{
+        margin-top:5rem;
+    }
+    .ss-buildings:before{
+        margin: 1rem;
+        vertical-align: 10rem;
+        font-size: 20rem;
+    }
+}
+    
+    .logo{
+        margin:1rem;
+        margin-right: 0;
+        width: 90%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 80%;
+    }
+    
+    .title-bar button{
+        position: absolute;
+        right: .3rem;
+        top:3rem;
+    }
+    
+    .menu-icon:focus{
+        outline-width: 0;
+    }
+    
+    .banner{
+        article{
+            text-align: center;
+            padding-right: 0 !important;
+            padding-top: 30%;
+        }
+    }
+    
+    div.switch-lang{
+    position:absolute; right:1rem; top:.35rem;
+}
+
+}
+
+/*FORMULARIO*/
+
+.reveal{
+    h1:before{
+    margin-right: 1rem;
+    vertical-align: middle;
+        }
+    h1{
+        font-family: "Lato";
+        font-weight: bold;
+        color:$peru-red;
+    }
+    
+    .close-button{
+        color:$peru-red;
+    }
+}
+
+/*ASESORIAS*/
+.asesoria-comercial{
+    margin-top: 1.5rem;
+    h3{
+        margin-left:-1.5rem;
+    }
+}
+.asesoria-laboral{
+    margin-top: 1.5rem !important;
+    img{
+        object-fit: cover ;
+    }
+    h3{
+        margin-left:-1.5rem;
+    }
+}
+.asesoria-civil{
+    margin-top:1.5rem;
+    h3{
+        margin-left:-1.5rem;
+    }
+}
+.civil-text, .laboral-text, .comercial-text{
+    margin-left:-1rem !important;
+    h3{
+        &:after{
+            display: none;
+        }
+    }
+}
+
